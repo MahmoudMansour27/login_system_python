@@ -39,6 +39,7 @@ class Admin:
         # view info
         if check == True:
             Index = list(studentData['email']).index(email)
+            print(Index)
             print(f'''
                     Student data:
                     1. ID: {students[Index].identity}
@@ -53,7 +54,7 @@ class Admin:
             item = int(input("enter data number: "))
             if item == 1:
                 newItem = int(input("enter new ID: "))
-                studentData.loc[Index] = [newItem,
+                studentData.loc[Index+1] = [newItem,
                                           students[Index].age,
                                           students[Index].name,
                                           students[Index].lastname,
@@ -65,7 +66,7 @@ class Admin:
                 print(studentData)
             elif item == 2:
                 newItem = int(input("enter new age: "))
-                studentData.loc[Index] = [students[Index].identity,
+                studentData.loc[Index+1] = [students[Index].identity,
                                           newItem,
                                           students[Index].name,
                                           students[Index].lastname,
@@ -77,7 +78,7 @@ class Admin:
                 print(studentData)
             elif item == 3:
                 newItem = input("enter new first name: ")
-                studentData.loc[Index] = [students[Index].identity,
+                studentData.loc[Index+1] = [students[Index].identity,
                                           students[Index].age,
                                           newItem,
                                           students[Index].lastname,
@@ -89,7 +90,7 @@ class Admin:
                 print(studentData)
             elif item == 4:
                 newItem = input("enter new last name: ")
-                studentData.loc[Index] = [students[Index].identity,
+                studentData.loc[Index+1] = [students[Index].identity,
                                           students[Index].age,
                                           students[Index].name,
                                           newItem,
@@ -101,7 +102,7 @@ class Admin:
                 print(studentData)
             elif item == 5:
                 newItem = input("enter new faculty: ")
-                studentData.loc[Index] = [students[Index].identity,
+                studentData.loc[Index+1] = [students[Index].identity,
                                           students[Index].age,
                                           students[Index].name,
                                           students[Index].lastname,
@@ -113,7 +114,7 @@ class Admin:
                 print(studentData)
             elif item == 6:
                 newItem = int(input("enter new level: "))
-                studentData.loc[Index] = [students[Index].identity,
+                studentData.loc[Index+1] = [students[Index].identity,
                                           students[Index].age,
                                           students[Index].name,
                                           students[Index].lastname,
@@ -125,7 +126,7 @@ class Admin:
                 print(studentData)
             elif item == 7:
                 newItem = input("enter new email: ")
-                studentData.loc[Index] = [students[Index].identity,
+                studentData.loc[Index+1] = [students[Index].identity,
                                           students[Index].age,
                                           students[Index].name,
                                           students[Index].lastname,
@@ -137,7 +138,7 @@ class Admin:
                 print(studentData)
             elif item == 8:
                 newItem = int(input("enter new password: "))
-                studentData.loc[Index] = [students[Index].identity,
+                studentData.loc[Index+1] = [students[Index].identity,
                                           students[Index].age,
                                           students[Index].name,
                                           students[Index].lastname,
